@@ -3,7 +3,7 @@ var mysql = require("mysql2");
 var dbConfig = {
   host: "localhost",
   user: "root",
-  password: "1234",
+  password: "cotmdwl@11",
   database: "ddokddok",
 };
 

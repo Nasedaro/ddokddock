@@ -49,6 +49,16 @@ app.use(
   })
 );
 
+
+const cors = require('cors')
+
+let corsOptions = {
+  origin: '*',      // 출처 허용 옵션
+  credential: true, // 사용자 인증이 필요한 리소스(쿠키 등) 접근
+}
+
+app.use(cors(corsOptions))
+
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -81,6 +91,8 @@ app.use(
   },
   chatRouter
 );
+
+
 
 // socket.io 설정
 io.on("connection", socket => {
